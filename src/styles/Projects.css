@@ -12,7 +12,7 @@
 }
 .heading{
     padding-left: 40px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 .accordion-left {
     
@@ -29,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 20px;
+    padding: 14px 20px;
     cursor: pointer;
     transition: background 0.2s ease;
     border-bottom: 1px solid #f0f0f0;
@@ -51,7 +51,7 @@
 }
 
 .project-name {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
      text-decoration: none;
      transition: text-decoration 0.3s ease;
 }

@@ -33,7 +33,7 @@ export default function Achievements() {
         <div className="marquee-gradient-left"></div>
         <div className="marquee-gradient-right"></div>
       </div>
-      <h3 style={{ fontSize: "1.3rem" }}>Acheivements</h3>
+      <h3>Acheivements</h3>
       <div className="certificates-grid" style={{ zIndex: "100" }} data-aos="fade-left">
 
         {/* Embed example badge - replace with your real badge ids */}
@@ -57,12 +57,12 @@ export default function Achievements() {
               className=""
               style={{ width: "100px", height: "100px", borderRadius: "2px", boxShadow: "0 4px 12px rgba(18, 18, 18, 0.075)" }}
             />
-            <p >Frontend
+            <p style={{fontSize:"0.8rem"}}>Frontend
               <div className="truncate"> Developer(React)</div>
-              <i className="truncate" style={{ fontSize: '0.8rem', marginTop: "4px", color: "rgb(134, 132, 132)" }}>Issuer: Hackerank</i>
+              <i className="truncate" style={{ fontSize: '0.7rem', marginTop: "4px", color: "rgb(134, 132, 132)" }}>Issuer: Hackerank</i>
             </p>
           </div>
-          <div style={{ border: '1px solid #ddd', borderTop: "0px solid #ddd", backgroundColor: "rgba(205, 202, 202, 0.24)", fontSize: "0.6rem", padding: "5px 6px", width: "91.5%", color: "rgb(160, 158, 158)", alignItems: "center", display: "flex", justifyContent: "center", margin: "auto" }}>
+          <div style={{ border: '1px solid #ddd', borderTop: "0px solid #ddd", backgroundColor: "rgba(205, 202, 202, 0.24)", fontSize: "0.6rem", padding: "4px 6px", width: "91.5%", color: "rgb(160, 158, 158)", alignItems: "center", display: "flex", justifyContent: "center", margin: "auto" }}>
             PROVIDED BY
             <span className="simple-icons--hackerrank" style={{ width: "15px", border: "1px solid black", marginLeft: "1px" }}></span>
           </div>

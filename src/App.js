@@ -1,7 +1,7 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import React,{ useEffect }from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Aboutme from './components/Aboutme';
@@ -20,8 +20,30 @@ export default function App() {
       once: false,     // animation only once
     });
   }, []);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Typing animation time
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="loader">
+        <div className="reveal">
+        Sai Bhagavan's
+        <span style={{color:"#ddd",fontSize:"1rem",display:'block',textAlign:"center"}}>portfolio</span>
+          <div className="mask"></div>
+          <div className="line"></div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div style={{ overflowX: 'hidden'}}>
+    <div style={{ overflowX: 'hidden' }}>
       {/* <div className="marquee-gradient-left"></div>
       <div className="marquee-gradient-right"></div> */}
       <Navbar />
@@ -47,7 +69,7 @@ export default function App() {
           <a href="https://www.instagram.com/teja.javvadi/" target="_blank" rel="noreferrer">
             <span className='line-md--instagram' alt="Instagram" />
           </a>
-          
+
         </div>
       </footer>
 

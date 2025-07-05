@@ -27,13 +27,13 @@
   }
 }
 .hero-heading {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   transition: margin-bottom 0.3s ease;
 }
 
 .hero-subheading {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 30px;
 }
 

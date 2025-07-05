@@ -54,25 +54,44 @@ export default function AboutMe() {
       </div>
 
       <div className="about-right" >
-        <h2>Coding Profiles</h2>
-        <div className="profiles-grid">
-          {data.skillscoding.map((profile, index) => (
-            <a href={profile.link} className="profile-card" key={index} target="_blank" rel="noopener noreferrer">
-            {/* <div> */}
-              <span className={`${profile.logo} img`}></span>
-              <h6>{profile.platform}</h6>
-            {/* </div>  */}
-              {/* <p>{profile.stat}</p> */}
-            </a>
-          ))}
-        </div>
-          
-        <h2 style={{marginTop:"50px"}}>Skills</h2>
-        <div className="skills-grid">
-          
-          {data.skills.map((skill, index) => (
-            <span className={`${skill.src} skill-logo`} alt="Skill" key={index} data-aos="fade-up" />
-          ))}
+        <h2>Skills</h2>
+        <div className="skills-section">
+
+          <div className="skills-group">
+            <h3>Frontend</h3>
+            <div className="skills-grid">
+              {data.skills.frontend.map((skill, index) => (
+                <span className={`${skill.src} skill-logo`} key={index} data-aos="fade-up" />
+              ))}
+            </div>
+          </div>
+
+          <div className="skills-group">
+            <h3>Backend</h3>
+            <div className="skills-grid">
+              {data.skills.backend.map((skill, index) => (
+                <span className={`${skill.src} skill-logo`} key={index} data-aos="fade-up" />
+              ))}
+            </div>
+          </div>
+
+          <div className="skills-group">
+            <h3>Database</h3>
+            <div className="skills-grid">
+              {data.skills.database.map((skill, index) => (
+                <span className={`${skill.src} skill-logo`} key={index} data-aos="fade-up" />
+              ))}
+            </div>
+          </div>
+
+          <div className="skills-group">
+            <h3>Cloud & DevOps</h3>
+            <div className="skills-grid">
+              {data.skills.cloud.map((skill, index) => (
+                <span className={`${skill.src} skill-logo`} key={index} data-aos="fade-up" />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

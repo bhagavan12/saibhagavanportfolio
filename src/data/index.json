@@ -22,68 +22,31 @@
       "link": "https://codeforces.com/profile/yourusername"
     }
   ],
-  "skills":[
-    {
-      "id":"1",
-      "src":"devicon-plain--html5-wordmark"
-    },
-    {
-      "id":"2",
-      "src":"devicon--react-wordmark"
-    },
-    {
-      "src":"skill-icons--java-light"
-    },
-    {
-      "src":"skill-icons--python-light"
-    },
-    {
-      "id":"3",
-      "src":"devicon-plain--css3-wordmark"
-    },
-    {
-      "id":"4",
-      "src":"vscode-icons--file-type-js-official"
-    },
-    {
-      "id":"5",
-      "src":"devicon-plain--nodejs-wordmark"
-    },
-    {
-      "id":"10",
-      "src":"skill-icons--expressjs-light"
-    },
-    {
-      "src":"devicon--mongoose-wordmark"
-    },
-    {
-      "src":"simple-icons--springboot"
-    },
-    {
-      "id":"6",
-      "src":"devicon--mysql-wordmark"
-    },
-    {
-      "id":"7",
-      "src":"skill-icons--aws-light"
-    },
-    {
-      "id":"8",
-      "src":"logos--firebase"
-    },
-    {
-      "id":"9",
-      "src":"devicon--mongodb-wordmark"
-    },
-    {
-      "id":"11",
-      "src":"bi--github"
-    },
-    {
-      "id":"12",
-      "src":"devicon--docker-wordmark "
-    }
-  ],
+  "skills": {
+    "frontend": [
+      { "src": "devicon-plain--html5-wordmark" },
+      { "src": "devicon-plain--css3-wordmark" },
+      { "src": "vscode-icons--file-type-js-official" },
+      { "src": "devicon--react-wordmark" }
+    ],
+    "backend": [
+      { "src": "devicon-plain--nodejs-wordmark" },
+      { "src": "skill-icons--expressjs-light" },
+      { "src": "simple-icons--springboot" },
+      { "src": "skill-icons--java-light" },
+      { "src": "skill-icons--python-light" }
+    ],
+    "database": [
+      { "src": "devicon--mysql-wordmark" },
+      { "src": "devicon--mongodb-wordmark" },
+      { "src": "devicon--mongoose-wordmark" }
+    ],
+    "cloud": [
+      { "src": "skill-icons--aws-light" },
+      { "src": "logos--firebase" },
+      { "src": "devicon--docker-wordmark" }
+    ]
+  },
   "portfolio": [
     {
       "id": "1",
