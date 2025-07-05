@@ -1,0 +1,56 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import React,{ useEffect }from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Aboutme from './components/Aboutme';
+import Skills from './components/Skills';
+import Achievements from './components/Achievements';
+import Projects from './components/Projects';
+import Resume from './components/Resume';
+import SocialLinks from './components/SocialLinks';
+
+import './App.css';
+
+export default function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // default animation duration
+      once: false,     // animation only once
+    });
+  }, []);
+  return (
+    <div style={{ overflowX: 'hidden'}}>
+      {/* <div className="marquee-gradient-left"></div>
+      <div className="marquee-gradient-right"></div> */}
+      <Navbar />
+      <section id="hero"><Hero /></section>
+      <section id="aboutme"><Aboutme /></section>
+      <section id="achievements"><Achievements /></section>
+      <section id="projects"><Projects /></section>
+      <section id="resume"><Resume /></section>
+      <section id="social"><SocialLinks /></section>
+      <footer className="footer-contact">
+        <h2>Let’s Connect</h2>
+        <p>Reach out anytime — open for collaborations & opportunities!</p>
+        <div className="footer-socials">
+          <a href="https://www.linkedin.com/in/javvadi-sai-bhagavan-793960248/" target="_blank" rel="noreferrer">
+            <span className='line-md--linkedin' alt="LinkedIn" />
+          </a>
+          <a href="mailto:2100032454cseh@gmail.com">
+            <span className='streamline--gmail' alt="Mail" />
+          </a>
+          <a href="https://github.com/bhagavan12" target="_blank" rel="noreferrer">
+            <span className='mdi--github' alt="Github" />
+          </a>
+          <a href="https://www.instagram.com/teja.javvadi/" target="_blank" rel="noreferrer">
+            <span className='line-md--instagram' alt="Instagram" />
+          </a>
+          
+        </div>
+      </footer>
+
+    </div>
+  );
+}

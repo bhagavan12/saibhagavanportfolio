@@ -1,0 +1,223 @@
+{
+  "skillscoding":[
+     {
+      "id":1,
+      "platform": "CodeChef",
+      "logo": "simple-icons--codechef",
+      "stat": "50+ Repositories",
+      "link": "https://www.codechef.com/users/klu_2100032454"
+    },
+    {
+      "id":2,
+      "platform": "LeetCode",
+      "logo": "devicon--leetcode",
+      "stat": "350+ Problems Solved",
+      "link": "https://leetcode.com/u/saibhagavan32454/"
+    },
+    {
+      "id":3,
+      "platform": "Codeforces",
+      "logo": "simple-icons--codeforces",
+      "stat": "Specialist",
+      "link": "https://codeforces.com/profile/yourusername"
+    }
+  ],
+  "skills":[
+    {
+      "id":"1",
+      "src":"devicon-plain--html5-wordmark"
+    },
+    {
+      "id":"2",
+      "src":"devicon--react-wordmark"
+    },
+    {
+      "src":"skill-icons--java-light"
+    },
+    {
+      "src":"skill-icons--python-light"
+    },
+    {
+      "id":"3",
+      "src":"devicon-plain--css3-wordmark"
+    },
+    {
+      "id":"4",
+      "src":"vscode-icons--file-type-js-official"
+    },
+    {
+      "id":"5",
+      "src":"devicon-plain--nodejs-wordmark"
+    },
+    {
+      "id":"10",
+      "src":"skill-icons--expressjs-light"
+    },
+    {
+      "src":"devicon--mongoose-wordmark"
+    },
+    {
+      "src":"simple-icons--springboot"
+    },
+    {
+      "id":"6",
+      "src":"devicon--mysql-wordmark"
+    },
+    {
+      "id":"7",
+      "src":"skill-icons--aws-light"
+    },
+    {
+      "id":"8",
+      "src":"logos--firebase"
+    },
+    {
+      "id":"9",
+      "src":"devicon--mongodb-wordmark"
+    },
+    {
+      "id":"11",
+      "src":"bi--github"
+    },
+    {
+      "id":"12",
+      "src":"devicon--docker-wordmark "
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "1",
+      "src": "./img/bookrary.gif",
+      "title": "Bookrary",
+      "description": " A platform for book lovers to curate personal libraries, track reading progress, and locate books by keywords, title, genre, or publication date. ",
+      "linkd": "",
+      "linkg": "https://github.com/bhagavan12/bookrary_fe",
+      "used":["ReactJS","Redux","MySQL","ExpressJS"]
+    },
+    {
+      "id": "2",
+      "src": "./img/dealsblendr.gif",
+      "title": "DealsBlendr",
+      "description": "This DealsBlendr application is built using ReactJs and Spring framework. It is useful for users who are searching for better prices of electronic devices.",
+      "linkd": "https://dealsblendr.netlify.app/",
+      "linkg": "https://github.com/bhagavan12/mongo_clone",
+      "used":["Java","SpringBoot","Hibernate","ReactJS","MongoDB","netlify","render"]
+    },
+    {
+      "id": "3",
+      "src": "./img/linkspace.gif",
+      "title": "LinkSpace",
+      "description": "This project is a social media application where users can connect with friends ,share posts and Used technoloigies are ReactJS , Firebase Authentication and Database",
+      "linkd": "https://linkspace-sb.vercel.app/",
+      "linkg": "https://github.com/bhagavan12/LIn",
+      "used":["ReactJS","Firebase","CSS","BootStrap","Vercel"]
+    },
+    {
+      "id": "4",
+      "src": "./img/ezgif.com-crop.gif",
+      "title": "Stockhive",
+      "description": " Your go-to destination for real-time stock market updates and insights. Stay ahead of the curve with personalized watchlists and dynamic charts.",
+      "linkd": "https://stockhive.netlify.app/",
+      "linkg": "https://github.com/bhagavan12/StockHive_Frontend",
+      "used":["ReactJS","ExpressJS","BootStrap","MongoDB","netlify","NodeJS"]
+    },
+    {
+      "id": "5",
+      "src": "./img/ezgif.com-speed.gif",
+      "title": "DishDiscovery",
+      "description": "an interactive web app featuring step-by-step recipes and meal tutorials tailored for culinary enthusiasts",
+      "linkd": "",
+      "linkg": "https://github.com/bhagavan12/DishDiscovery",
+      "used":["ReactJS","APIs","JavaScript","CSS"]
+    },
+    {
+      "id": "6",
+      "src": "./img/votingapp_gif.gif",
+      "title": "Cloud Voting App",
+      "description": "Developed a cloud-native voting app with AWS services and React.js, leveraging DynamoDB, Lambda, API Gateway, and S3, Firebase for easy authentication. ",
+      "linkd": "",
+      "linkg": "https://github.com/bhagavan12/cloudvotingapp",
+      "used":["ReactJS","AWS","Firebase"]
+    }
+     
+  ],
+  "achievement_certificates":[
+    {
+      "id":"1",
+      "title":"AWS Developer -Associate",
+      "src":"./img/certificates/developer_32454.png",
+      "link":"https://www.credly.com/badges/c89ab085-7ea9-4cdc-8bde-5700a6e0be36/public_url",
+      "date":"Nov 2023 - Nov 2026"
+    },
+    {
+      "id":"2",
+      "title":"AWS Cloud Practitioner",
+      "src":"./img/certificates/cp_32454.png",
+      "link":"https://www.credly.com/badges/7e70bcb9-763a-40a7-8134-5be1dfb82bbd/public_url",
+      "date":"June 2023 - Nov 2026"
+    },
+    {
+      "id":"3",
+      "title":"Red Hat Certified Enterprise Application Developer",
+      "src":"./img/certificates/redhat_32454.png",
+      "link":"https://www.credly.com/badges/f1b79f48-643d-4b69-b0b5-63322e0eae04/public_url",
+      "date":"August 2023 - August 2026"
+    },
+    {
+      "id":"4",
+      "title":"AWS Academy Cloud Foundations",
+      "src":"./img/certificates/foundations_32454.png",
+      "link":"https://www.credly.com/badges/514fbf79-923e-435a-9940-2cf67a027ef8/public_url",
+      "date":"January 2023"
+    },
+    {
+      "id":"5",
+      "title":"AWS Knowledge: Cloud Essentials",
+      "src":"./img/certificates/essentails_32454.png",
+      "link":"https://www.credly.com/badges/9028f364-d183-4342-b819-266b7c738047/public_url",
+      "date":"February 2024"
+    },
+    {
+      "id":"6",
+      "title":"LeetCode 50 Days",
+      "src":"./img/certificates/leetcode_50days.gif",
+      "link":"https://leetcode.com/saibhagavan32454/",
+      "date":"January 2023"
+    }
+  ],
+  "publications":[
+    {
+      "id":"1",
+      "title":"Secure Encryption Framework for Multi-Cloud Environments: Leveraging Symmetric and Asymmetric Encryption",
+      "des":"Data encryption is the process of turning data into encrypted data. It is a crucial technology for securing data while it is being stored or transmitted, especially in cloud environments where data is stored remotely and accessed over the internet. In our study, we compared five well-known algorithms to...",
+      "date":"Published on 09 February 2024",
+      "link":"https://ieeexplore.ieee.org/document/10394865"
+    }
+  ],
+  "testimonial": [
+    {
+      "id": "1",
+      "count": "5",
+      "src": "./img/avatar-image.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "author_name": "Dianne Russel",
+      "author_designation": "Starbucks"
+    },
+    {
+      "id": "2",
+      "count": "5",
+      "src": "./img/avatar-image-1.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "author_name": "Kristin Watson",
+      "author_designation": "Louis Vuitton"
+    },
+    {
+      "id": "3",
+      "count": "5",
+      "src": "./img/avatar-image-2.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "author_name": "Kathryn Murphy",
+      "author_designation": "McDonald's"
+    }
+  ]
+}

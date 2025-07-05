@@ -1,0 +1,236 @@
+.hero {
+  display: flex;
+  min-height: fit-content;
+  position: relative;
+}
+
+.hero-left {
+  
+  margin-left: 10px;
+  /* border: 1px solid rgba(0, 0, 0, 0.918); */
+  flex: 1;
+  padding: 20px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  transition: margin-left 0.3s ease, padding 0.3s ease;
+  opacity: 0; /* 👈 NEW */
+  transform: translateX(-40px); /* 👈 NEW */
+  animation: slideIn 1.2s ease forwards; 
+}
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.hero-heading {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: margin-bottom 0.3s ease;
+}
+
+.hero-subheading {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  background: #000;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #333;
+}
+
+.hero-btn-outline {
+  background: transparent;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.hero-right {
+  flex: 1.5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Important: Hide scroll overflow */
+}
+
+.marquee-container {
+  
+  position: absolute; /* Position relative to .hero-right */
+  inset: 0;
+  overflow: hidden;
+  z-index: 1; /* Behind the image */
+  
+}
+
+.marquee {
+  margin-top: 120px;
+  /* border: 1px solid rgb(0, 0, 0); */
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  transition: margin-top 0.3s ease;
+}
+
+.marquee2 {
+  animation-delay: 2s;
+}
+
+.marquee span {
+  padding-right: 100px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-gradient-left,
+.marquee-gradient-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 12%;
+  z-index: 2; /* Above marquee but below image */
+}
+
+.marquee-gradient-left {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.marquee-gradient-right {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+.hero-photo {
+  position: relative;
+  z-index: 3; /* Top layer */
+}
+
+.hero-photo img {
+  width: 450px;
+  height: 350px;
+  border-radius: 10%;
+  object-fit: cover;
+  /* border: 4px solid #fff; */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease;
+   animation: float 6s ease-in-out infinite; 
+}
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.hero-socials {
+
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  z-index: 4;
+}
+
+.hero-socials span {
+  width: 38px;
+  height: 38px;
+  transition: transform 0.3s ease;
+  
+}
+
+.hero-socials span:hover {
+  /* transform: scale(1.1); */
+}
+
+.footer-contact {
+  background: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-contact .footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.footer-contact img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.footer-contact img:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .hero-socials span {
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+  }
+  .hero-socials {
+    margin: auto;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    /* border: 1px solid rgba(0, 0, 0, 0.918); */
+  }
+
+  .hero-left {
+    
+    margin-left: 0px;
+    order: 2;
+    padding: 40px 20px;
+  }
+
+  .hero-right {
+    order: 1;
+    width: 100%;
+    height: 250px;
+  }
+
+  .marquee {
+    margin-top: 120px;
+    font-size: 2.5rem;
+  }
+
+  .hero-photo img {
+    box-shadow: none;
+    /* margin-top: 10px; */
+    width: 480px;
+    height: 350px;
+    /* border: 1px solid rgba(0, 0, 0, 0.918); */
+  }
+  .hero-heading {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}

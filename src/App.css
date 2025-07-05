@@ -1,0 +1,56 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Godber';
+  src: url('../fonts/Godber-Regular.woff2') format('woff2'),   /* WOFF2 for modern browsers */
+       url('../fonts/Godber-Regular.woff') format('woff'),     /* WOFF for older browsers */
+       url('../fonts/Godber-Regular.ttf') format('truetype'),  /* TTF for better compatibility */
+       url('../fonts/Godber-Regular.otf') format('opentype'); /* OTF for modern fonts */
+       
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Camaufalge';
+  src: url('../fonts/Camaufalge.otf') format('opentype'),
+  url('../fonts/Camaufalge.ttf') format('truetype');  
+       
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HamburgerHeauen';
+  src: url('../fonts/HAMBH___.ttf') format('truetype');  
+       
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+.footer-contact {
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  background: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-contact .footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.footer-contact img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.footer-contact img:hover {
+  transform: scale(1.2);
+}
