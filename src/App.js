@@ -10,6 +10,7 @@ import Achievements from './components/Achievements';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
 import SocialLinks from './components/SocialLinks';
+import Contact from './components/Contact';
 
 import './App.css';
 
@@ -53,7 +54,8 @@ export default function App() {
       <section id="projects"><Projects /></section>
       <section id="resume"><Resume /></section>
       <section id="social"><SocialLinks /></section>
-      <footer className="footer-contact">
+      <section id="social"><Contact></Contact></section>
+      {/* <footer className="footer-contact">
         <h2>Let’s Connect</h2>
         <p>Reach out anytime — open for collaborations & opportunities!</p>
         <div className="footer-socials">
@@ -71,7 +73,7 @@ export default function App() {
           </a>
 
         </div>
-      </footer>
+      </footer> */}
 
     </div>
   );
