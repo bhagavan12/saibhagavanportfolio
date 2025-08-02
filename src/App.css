@@ -4,38 +4,73 @@ html {
 
 @font-face {
   font-family: 'Godber';
-  src: url('../fonts/Godber-Regular.woff2') format('woff2'),   /* WOFF2 for modern browsers */
-       url('../fonts/Godber-Regular.woff') format('woff'),     /* WOFF for older browsers */
-       url('../fonts/Godber-Regular.ttf') format('truetype'),  /* TTF for better compatibility */
-       url('../fonts/Godber-Regular.otf') format('opentype'); /* OTF for modern fonts */
-       
+  src: url('../fonts/Godber-Regular.woff2') format('woff2'),
+       url('../fonts/Godber-Regular.woff') format('woff'),
+       url('../fonts/Godber-Regular.ttf') format('truetype'),
+       url('../fonts/Godber-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Camaufalge';
   src: url('../fonts/Camaufalge.otf') format('opentype'),
-  url('../fonts/Camaufalge.ttf') format('truetype');  
-       
+       url('../fonts/Camaufalge.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'HamburgerHeauen';
-  src: url('../fonts/HAMBH___.ttf') format('truetype');  
-       
+  src: url('../fonts/HAMBH___.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --border-color: rgba(0, 0, 0, 0.918);
+  --marquee-color: rgba(0, 0, 0, 0.05);
+  --button-bg: #000000;
+  --button-text: #ffffff;
+  --button-hover-bg: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --gradient-start: #ffffff;
+  --gradient-end: transparent;
+  --theme-invert: 0;
+  --text-muted: #888888;
+  --bg-muted: rgba(205, 202, 202, 0.24);
+}
+
+body.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --border-color: rgba(255, 255, 255, 0.918);
+  --marquee-color: rgba(255, 255, 255, 0.05);
+  --button-bg: #ffffff;
+  --button-text: #000000;
+  --button-hover-bg: #cccccc;
+  --shadow-color: rgba(255, 255, 255, 0.2);
+  --gradient-start: #1a1a1a;
+  --gradient-end: transparent;
+  --theme-invert: 1;
+  --text-muted: #aaaaaa;
+  --bg-muted: rgba(100, 100, 100, 0.24);
+}
+.app {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
 
 .footer-contact {
-  /* border: 1px solid rgba(0, 0, 0, 0.1); */
-  background: #f9f9f9;
+  background: var(--bg-muted);
   padding: 40px 20px;
   text-align: center;
-  /* width: 100%; */
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .footer-contact .footer-socials {
@@ -45,53 +80,43 @@ html {
   margin: 20px 0;
 }
 
-.footer-socials a span{
+.footer-socials a span {
   width: 30px;
   height: 30px;
-  /* border: 1px solid #000000; */
   transition: transform 0.3s ease;
+  filter: invert(var(--theme-invert));
 }
 
 .footer-contact img:hover {
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 768px) {
-  .footer-contact {
-    /* border: 1px solid #000000; */
-  }
-  .footer-socials{
-    /* border: 1px solid #000000; */
-    /* width: fit-content; */
-    
-  }
-  
-}
 .loader {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #fff;
+  background: var(--bg-color);
   font-size: 3rem;
   font-weight: bold;
   position: relative;
   overflow: hidden;
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .reveal {
   position: relative;
   display: inline-block;
-  color: #000;
 }
 
 .reveal .mask {
   position: absolute;
   top: 0;
-  left: 0; /* LEFT side */
+  left: 0;
   height: 100%;
   width: 100%;
-  background: #fff; /* same as background */
+  background: var(--bg-color);
   animation: slideMask 2s forwards;
 }
 
@@ -101,12 +126,11 @@ html {
   left: 0;
   height: 100%;
   width: 4px;
-  background: #000;
+  background: var(--text-color);
   animation: slideLine 2s forwards;
-  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.4);
-  filter: drop-shadow(-10px 0 8px #000);
+  box-shadow: -10px 0 20px var(--shadow-color);
+  filter: drop-shadow(-10px 0 8px var(--shadow-color));
 }
-
 
 @keyframes slideMask {
   0% {
@@ -125,5 +149,11 @@ html {
   }
   100% {
     left: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-contact {
+    padding: 20px;
   }
 }

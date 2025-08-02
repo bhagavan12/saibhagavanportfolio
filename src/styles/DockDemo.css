@@ -6,25 +6,25 @@
   transform: translateX(-50%);
   display: flex;
   align-items: flex-end;
-  background: #ffffff;
+  background: var(--bg-color);
   padding: 8px 20px;
   border-radius: 20px;
-  border: 2px solid rgba(109, 107, 107, 0.116);
+  border: 2px solid rgba(137, 134, 134, 0.29);
   z-index: 999;
-  transition: padding 0.3s ease;
+  transition: padding 0.3s ease, background 0.3s ease, border 0.3s ease;
 }
 
 /* Each dock item: RELATIVE so tooltip positions correctly */
 .dock-item {
-  position: relative; /* IMPORTANT! */
-  background: rgb(255, 255, 255);
+  position: relative;
+  background: var(--bg-color);
   padding: 4px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #000000;
+  color: var(--text-color);
   font-size: 0.75rem;
   margin: 0 8px;
   transition: transform 0.5s ease, margin 0.8s ease, background 0.5s ease;
@@ -34,16 +34,17 @@
   font-size: 28px;
   display: block;
   transition: transform 0.3s ease;
+  filter: invert(var(--theme-invert));
 }
 
 /* Tooltip: positioned above EACH item */
 .dock-label {
   position: absolute;
-  bottom: 120%; /* above the icon */
+  bottom: 120%;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  background: #000;
-  color: #fff;
+  background: var(--button-bg);
+  color: var(--button-text);
   padding: 4px 8px;
   border-radius: 6px;
   font-size: 0.7rem;
@@ -60,7 +61,7 @@
 }
 
 .dock-item:hover {
-  background: rgba(109, 107, 107, 0.116);
+  background: var(--bg-muted);
 }
 
 .dock-item:hover {
@@ -68,7 +69,7 @@
   margin-right: 20px;
 }
 
-/* Responsive tweaks same as before */
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .dock-navbar {
     padding: 6px 16px;

@@ -1,6 +1,7 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { ThemeProvider } from './components/ThemeProvider';
+import ThemeToggle from './components/ThemeToggle';
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -32,6 +33,7 @@ export default function App() {
 
   if (loading) {
     return (
+      
       <div className="loader">
         <div className="reveal">
         Sai Bhagavan's
@@ -44,7 +46,9 @@ export default function App() {
   }
 
   return (
-    <div style={{ overflowX: 'hidden' }}>
+    //  <ThemeProvider>
+
+    <div className='app' style={{ overflowX: 'hidden' }}>
       {/* <div className="marquee-gradient-left"></div>
       <div className="marquee-gradient-right"></div> */}
       <Navbar />
@@ -55,26 +59,9 @@ export default function App() {
       <section id="resume"><Resume /></section>
       <section id="social"><SocialLinks /></section>
       <section id="social"><Contact></Contact></section>
-      {/* <footer className="footer-contact">
-        <h2>Let’s Connect</h2>
-        <p>Reach out anytime — open for collaborations & opportunities!</p>
-        <div className="footer-socials">
-          <a href="https://www.linkedin.com/in/javvadi-sai-bhagavan-793960248/" target="_blank" rel="noreferrer">
-            <span className='line-md--linkedin' alt="LinkedIn" />
-          </a>
-          <a href="mailto:2100032454cseh@gmail.com">
-            <span className='streamline--gmail' alt="Mail" />
-          </a>
-          <a href="https://github.com/bhagavan12" target="_blank" rel="noreferrer">
-            <span className='mdi--github' alt="Github" />
-          </a>
-          <a href="https://www.instagram.com/teja.javvadi/" target="_blank" rel="noreferrer">
-            <span className='line-md--instagram' alt="Instagram" />
-          </a>
-
-        </div>
-      </footer> */}
+      <ThemeToggle />
 
     </div>
+    //  </ThemeProvider>
   );
 }

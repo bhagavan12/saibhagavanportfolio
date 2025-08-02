@@ -14,7 +14,7 @@ export default function DockNavbar() {
     <nav className="dock-navbar">
       {navItems.map((item, index) => (
         <a href={item.link} className="dock-item" key={index}>
-          <span className={item.icon}></span>
+          <span className={`${item.icon} dock-icon`}></span>
           <span className="dock-label">{item.label}</span>
         </a>
       ))}
