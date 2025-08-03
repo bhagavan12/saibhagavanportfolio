@@ -107,6 +107,9 @@ export default function HeroSection() {
           Building innovative digital solutions with cutting-edge technologies. Specialized in MERN stack, cloud computing, and Java to drive impactful business growth. Passionate about learning and adapting to new challenges in the tech landscape.
         </p>
         <div className="hero-socials">
+          <span className=''></span>
+        </div>
+        <div className="hero-socials">
           <a href="https://www.linkedin.com/in/javvadi-sai-bhagavan-793960248/" target="_blank" rel="noreferrer">
             <span className='line-md--linkedin' alt="LinkedIn" />
           </a>

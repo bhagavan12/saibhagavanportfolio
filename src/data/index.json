@@ -24,27 +24,27 @@
   ],
   "skills": {
     "frontend": [
-      { "src": "devicon-plain--html5-wordmark" },
-      { "src": "devicon-plain--css3-wordmark" },
-      { "src": "vscode-icons--file-type-js-official" },
-      { "src": "devicon--react-wordmark" }
+      { "src": "skill-icons--html" },
+      { "src": "skill-icons--css" },
+      { "src": "skill-icons--javascript" },
+      { "src": "skill-icons--react-dark " }
     ],
     "backend": [
-      { "src": "devicon-plain--nodejs-wordmark" },
-      { "src": "skill-icons--expressjs-light" },
-      { "src": "simple-icons--springboot" },
-      { "src": "skill-icons--java-light" },
-      { "src": "skill-icons--python-light" }
+      { "src": "skill-icons--nodejs-dark" },
+      { "src": "skill-icons--expressjs-dark" },
+      { "src": "skill-icons--spring-dark" },
+      { "src": "skill-icons--java-dark" },
+      { "src": "skill-icons--python-dark" }
     ],
     "database": [
-      { "src": "devicon--mysql-wordmark" },
-      { "src": "devicon--mongodb-wordmark" },
+      { "src": "skill-icons--mysql-light" },
+      { "src": "skill-icons--mongodb" },
       { "src": "devicon--mongoose-wordmark" }
     ],
     "cloud": [
       { "src": "skill-icons--aws-light" },
       { "src": "logos--firebase" },
-      { "src": "devicon--docker-wordmark" }
+      { "src": "skill-icons--docker" }
     ]
   },
   "portfolio": [
