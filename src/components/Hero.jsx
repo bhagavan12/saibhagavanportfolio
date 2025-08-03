@@ -96,19 +96,17 @@ export default function HeroSection() {
 
   return (
     <section className="hero">
-      <Marquee sline="ReactJS | NodeJS | Spring Boot | ..." fline="Full Stack Developer | Cloud Enthusiast | ..." zi='0'/>
+      <Marquee sline="ReactJS | NodeJS | Spring Boot | ..." fline="Full Stack Developer | Cloud Enthusiast | ..." zi='0' />
       <div className="hero-left">
-        <h1 className="hero-h1">Hello, I'm 
-        <span className='hero-heading'>
-        Sai Bhagavan
-        </span>
+        <h1 className="hero-h1">Hello, I'm
+          <span className='hero-heading'>
+            Sai Bhagavan
+          </span>
         </h1>
         <p className="hero-subheading">
           Building innovative digital solutions with cutting-edge technologies. Specialized in MERN stack, cloud computing, and Java to drive impactful business growth. Passionate about learning and adapting to new challenges in the tech landscape.
         </p>
-        <div className="hero-socials">
-          <span className=''></span>
-        </div>
+
         <div className="hero-socials">
           <a href="https://www.linkedin.com/in/javvadi-sai-bhagavan-793960248/" target="_blank" rel="noreferrer">
             <span className='line-md--linkedin' alt="LinkedIn" />
@@ -129,6 +127,9 @@ export default function HeroSection() {
         <div className="hero-photo">
           <img src={currentImg} alt="Profile" />
         </div>
+        <div className="hero-info-block left"><span className='pepicons-print--star'></span>9.42 CGPA</div>
+        <div className="hero-info-block right"><span className='mynaui--code-waves-solid'></span>10+ Projects</div>
+        <div className="hero-info-block right1"><span className='certified--star'></span>5 Certs</div>
       </div>
     </section>
   );
