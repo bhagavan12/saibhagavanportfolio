@@ -45,9 +45,8 @@
     transform: translateX(0);
   }
 }
-.hero-h1{
+/* .hero-h1{
   font-size: 1rem;
-  /* margin-bottom: 20px; */
   transition: margin-bottom 0.3s ease;
   color: var(--text-color);
   
@@ -55,11 +54,69 @@
 .hero-heading {
   display: block;
   font-size: 2.5rem;
-  /* margin-bottom: 20px; */
+  transition: margin-bottom 0.3s ease;
+  color: var(--text-color);
+} */
+.hero-h1 {
+  font-size: 1rem;
   transition: margin-bottom 0.3s ease;
   color: var(--text-color);
 }
 
+.hero-heading {
+  display: block;
+  font-size: 2.5rem;
+  transition: margin-bottom 0.3s ease;
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    120deg,
+    var(--text-color) 0%,
+    var(--text-color) 20%,
+    var(--shimmer-color, #949492) 30%, 
+    var(--text-color) 40%,
+    var(--shimmer-color, #c2c2c1) 50%, 
+    var(--text-color) 60%,
+    var(--shimmer-color, #c2c2c1) 70%, 
+    var(--text-color) 80%,
+    var(--shimmer-color, #949492) 90%, 
+    var(--text-color) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: multi-shimmer 6.5s infinite linear; 
+}
+
+@keyframes multi-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+[data-theme="light"] .hero-heading {
+  --shimmer-color: #D4A017; 
+}
+
+[data-theme="dark"] .hero-heading {
+  --shimmer-color: #FFD700; 
+}
+
+@media (max-width: 768px) {
+  .hero-h1 {
+    font-size: 0.9rem;
+  }
+
+  .hero-heading {
+    font-size: 2rem;
+  }
+}
+ 
 .hero-subheading {
   font-size: 1rem;
   margin-bottom: 30px;
@@ -95,7 +152,7 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
-  z-index: 1;
+  /* z-index: -1; */
 }
 
 .marquee {

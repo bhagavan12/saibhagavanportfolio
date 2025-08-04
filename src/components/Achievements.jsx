@@ -126,7 +126,7 @@ export default function Achievements() {
         <div className="marquee-gradient-right"></div>
       </div> */}
 
-      <Marquee fline="AWS Certified CP | Developer-Associate |..." sline = "EX-183 | Hackerrank FrontEnd | LeetCode 50 Days" zi='-11'/>
+      <Marquee fline="AWS Certified CP | Developer-Associate |..." sline = "EX-183 | Hackerrank FrontEnd | LeetCode 50 Days" zi='-1'/>
       <h3>Achievements</h3>
       <div className="certificates-grid" style={{ zIndex: '100' }} data-aos="fade-left">
         <div className="cert-badge">

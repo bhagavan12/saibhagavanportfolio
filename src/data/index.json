@@ -101,6 +101,15 @@
       "linkd": "",
       "linkg": "https://github.com/bhagavan12/cloudvotingapp",
       "used":["ReactJS","AWS","Firebase"]
+    },
+    {
+      "id": "7",
+      "src": "./img/votingapp_gif.gif",
+      "title": "Cloud Voting App",
+      "description": "Developed a cloud-native voting app with AWS services and React.js, leveraging DynamoDB, Lambda, API Gateway, and S3, Firebase for easy authentication. ",
+      "linkd": "",
+      "linkg": "https://github.com/bhagavan12/cloudvotingapp",
+      "used":["ReactJS","AWS","Firebase"]
     }
      
   ],

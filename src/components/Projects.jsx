@@ -128,12 +128,12 @@ export default function ProjectsAccordion() {
   }, [selectedProject]);
 
   return (
-    <div>
+    <div className={`accordion-container ${theme}`}>
       <h3 className="heading">Projects</h3>
-      <section className={`accordion-section ${theme}`}>
+      <section className={`accordion-section`}>
         <div className="accordion-left">
           {projectsData.portfolio.map((project) => (
-            <div key={project.id} className="accordion-item-wrapper">
+            <div key={project.id} className="accordion-left-wrapper">
               <div
                 className={`accordion-item ${selectedProject?.id === project.id ? 'active' : ''}`}
                 onClick={() => handleSelect(project)}
