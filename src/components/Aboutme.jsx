@@ -134,7 +134,7 @@ export default function AboutMe() {
   return (
     <section className={`about-me ${theme}`}>
       <div className="about-left">
-        <h2>Education</h2>
+        <h2><span className='ph--graduation-cap-duotone'></span>Education</h2>
         <div className="timeline">
           {education.map((edu, index) => (
             <div className="timeline-item" key={index}>
@@ -154,7 +154,7 @@ export default function AboutMe() {
       </div>
 
       <div className="about-right">
-        <h2>Skills</h2>
+        <h2><span className='pixel--technology'></span>Skills</h2>
         <div className="skills-section">
           <div className="skills-group">
             <h3>Frontend</h3>

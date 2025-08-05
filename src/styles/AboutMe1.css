@@ -1,0 +1,170 @@
+/* Section Styling */
+.about-me1 {
+    padding: 2rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    /* Equivalent Tailwind: bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Equivalent Tailwind: max-w-6xl mx-auto */
+}
+
+.section-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+    /* border:1px solid var(--border-color); */
+    position: relative;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    /* font-size: 1rem; */
+    margin-bottom: 3rem;
+    /* border: 1px solid var(--border-color); */
+}
+
+.intro p {
+    font-size: clamp(1rem, 2vw, 1.025rem);
+    line-height: 1.6;
+    /* max-width: 600px; */
+    margin: 0 auto 0.5rem;
+    /* Equivalent Tailwind: text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-2 */
+}
+
+/* Expertise Section */
+.expertise h3 {
+    font-size: clamp(1.2rem, 2.2vw, 1.4rem);
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* border: 1px solid var(--border-color); */
+    /* Equivalent Tailwind: text-lg sm:text-xl mb-6 */
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    /* Equivalent Tailwind: grid grid-cols-1 gap-6 */
+}
+
+@media (min-width: 768px) {
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Equivalent Tailwind: md:grid-cols-2 */
+    }
+}
+
+.expertise-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    /* Equivalent Tailwind: bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md */
+}
+
+.expertise-card:hover {
+    transform: scale(1.05);
+    /* Equivalent Tailwind: hover:scale-105 */
+}
+
+.expertise-card h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    /* Equivalent Tailwind: text-lg mb-2 text-yellow-600 dark:text-yellow-400 */
+}
+
+.expertise-card p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    /* Equivalent Tailwind: text-sm leading-relaxed mb-4 */
+}
+
+/* Coursework Section */
+.coursework h3 {
+    font-size: clamp(1.2rem, 2.2vw, 1.4rem);
+    margin: 2rem 0 1.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* Equivalent Tailwind: text-lg sm:text-xl mt-8 mb-6 */
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    /* Equivalent Tailwind: flex flex-wrap gap-2 */
+}
+
+.badge {
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 0.2rem 0.7rem;
+    border-radius: 1rem;
+    font-size: 0.775rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Equivalent Tailwind: bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200 py-2 px-4 rounded-full text-sm */
+}
+
+.badge:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    transform: scale(1.1);
+    /* Equivalent Tailwind: hover:bg-yellow-600 hover:text-white hover:scale-110 */
+}
+
+@media (hover: none) {
+
+    .badge:hover,
+    .expertise-card:hover {
+        transform: none;
+        /* Disable hover effects on touch devices */
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-me1 {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .about-me1 {
+        padding: 1rem;
+    }
+
+    .expertise-card {
+        padding: 1rem;
+    }
+
+    .badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+        /* Equivalent Tailwind: py-1 px-3 text-xs */
+    }
+}

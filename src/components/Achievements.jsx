@@ -127,8 +127,11 @@ export default function Achievements() {
       </div> */}
 
       <Marquee fline="AWS Certified CP | Developer-Associate |..." sline = "EX-183 | Hackerrank FrontEnd | LeetCode 50 Days" zi='-1'/>
-      <h3>Achievements</h3>
+      <h2 className="section-title">Achievements
+            <hr className="headinguline"></hr>
+        </h2>
       <div className="certificates-grid" style={{ zIndex: '100' }} data-aos="fade-left">
+        <h3><span className='ph--certificate-duotone'></span>Certifications</h3>
         <div className="cert-badge">
           <div
             data-iframe-width="150"

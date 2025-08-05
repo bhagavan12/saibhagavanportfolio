@@ -28,7 +28,7 @@ html {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-:root {
+/* :root {
   --bg-color: #ffffff;
   --text-color: #000000;
   --border-color: rgba(0, 0, 0, 0.918);
@@ -58,12 +58,61 @@ body.dark {
   --theme-invert: 1;
   --text-muted: #aaaaaa;
   --bg-muted: rgba(100, 100, 100, 0.24);
+} */
+ :root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --border-color: rgba(0, 0, 0, 0.918);
+  --marquee-color: rgba(0, 0, 0, 0.05);
+  --button-bg: #000000;
+  --button-text: #ffffff;
+  --button-hover-bg: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --gradient-start: #ffffff;
+  --gradient-end: transparent;
+  --theme-invert: 0;
+  --text-muted: #888888;
+  --bg-muted: rgba(205, 202, 202, 0.24);
+  --card-bg: #f3f4f6; /* Light card background, slightly lighter than --bg-muted */
+  --accent-color: #d4af37; /* Gold accent for headings and badges */
+  --badge-bg: #e5e7eb; /* Slightly lighter than --bg-muted for badges */
+  --badge-text: #374151; /* Darker text for badge readability */
+}
+
+body.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --border-color: rgba(255, 255, 255, 0.918);
+  --marquee-color: rgba(255, 255, 255, 0.05);
+  --button-bg: #ffffff;
+  --button-text: #000000;
+  --button-hover-bg: #cccccc;
+  --shadow-color: rgba(255, 255, 255, 0.2);
+  --gradient-start: #1a1a1a;
+  --gradient-end: transparent;
+  --theme-invert: 1;
+  --text-muted: #aaaaaa;
+  --bg-muted: rgba(100, 100, 100, 0.24);
+  --card-bg: #2d2d2d; /* Darker card background, aligned with --bg-muted */
+  --accent-color: #e6c14d; /* Lighter gold for dark mode */
+  --badge-bg: #4b5563; /* Darker badge background */
+  --badge-text: #e5e7eb; /* Lighter text for badges in dark mode */
 }
 .app {
   background: var(--bg-color);
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
 }
+.page-break {
+  margin: 40px auto 10px auto;
+  /* margin: auto; */
+  width: 70%;
+  height: 1px;
+  background-color: #999;
+  border: none;
+  opacity: 0.3;
+}
+
 
 .footer-contact {
   background: var(--bg-muted);
@@ -155,5 +204,31 @@ body.dark {
 @media screen and (max-width: 768px) {
   .footer-contact {
     padding: 20px;
+  }
+}
+
+.headinguline {
+  width: 100%;
+  height: 4px;
+  border: none;
+  margin-top: 0.5rem;
+  background: linear-gradient(
+    120deg,
+    var(--text-color),
+    var(--shimmer-color, #949492),
+    var(--text-color),
+    var(--shimmer-color, #949492),
+    var(--text-color)
+  );
+  background-size: 200% 100%;
+  animation: multi-shimmer 3s linear infinite;
+}
+
+@keyframes multi-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
   }
 }

@@ -1,17 +1,21 @@
 .about-me {
   display: flex;
   gap: 40px;
-  padding: 60px 40px;
+  padding: 60px 0px;
   flex-wrap: wrap;
   background: var(--bg-color);
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
+  /* border: 1px solid var(--border-color); */
 }
 
 .about-left h2 {
   margin-bottom: 20px;
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.4rem);
   color: var(--text-color);
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .timeline {
@@ -107,12 +111,16 @@
 }
 
 .about-right h2 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
   margin-bottom: 20px;
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.4rem);
   color: var(--text-color);
 }
 
 .skills-section {
+  justify-content: center;
   padding: 20px;
   margin-top: 20px;
   display: flex;

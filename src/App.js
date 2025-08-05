@@ -14,6 +14,7 @@ import SocialLinks from './components/SocialLinks';
 import Contact from './components/Contact';
 
 import './App.css';
+import AboutMe1 from './components/AboutMe1';
 
 export default function App() {
   useEffect(() => {
@@ -53,7 +54,10 @@ export default function App() {
       <div className="marquee-gradient-right"></div> */}
       <Navbar />
       <section id="hero"><Hero /></section>
-      <section id="aboutme"><Aboutme /></section>
+      <hr className="page-break" />
+      <section id="aboutme"><AboutMe1 /></section>
+      <hr className="page-break" />
+      {/* <section id="aboutme"><Aboutme /></section> */}
       <section id="achievements"><Achievements /></section>
       <section id="projects"><Projects /></section>
       <section id="resume"><Resume /></section>
