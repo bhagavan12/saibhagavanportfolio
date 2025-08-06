@@ -232,9 +232,7 @@
   transition: transform 0.3s ease;
   /* filter: invert(var(--theme-invert)); */
 }
-.icon-github{
 
-}
 .hero-socials span:hover {
   transform: scale(1.1);
 }

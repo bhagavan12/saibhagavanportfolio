@@ -52,7 +52,7 @@ const AboutMe1 = () => {
           <div className="expertise-grid">
             {expertise.map((item, index) => (
               <article key={index} className="expertise-card">
-                <h4>{item.title}</h4>
+                <h4><span className='ph--stack-duotone'></span>{item.title}</h4>
                 <p>{item.description}</p>
                 <div className="badges">
                   {item.badges.map((badge, idx) => (

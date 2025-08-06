@@ -1,192 +1,13 @@
-/* .accordion-section {
-  display: flex;
-  width: 100%;
-  max-height: 500px;
-  background: var(--bg-color);
-  border-radius: 8px;
-  overflow: hidden;
-  padding-left: 40px;
-  transition: padding-left 0.5s ease, max-height 0.5s ease, background 0.3s ease;
-}
-
-.heading {
-  padding-left: 40px;
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-.accordion-left {
-  flex: 1;
-  max-width: 250px;
-  background: var(--bg-color);
-  border-right: 2px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
-}
-
-.accordion-item {
-  margin: 10px 10px 0px 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 20px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  border-bottom: 1px solid var(--border-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px var(--shadow-color);
-  background: var(--bg-color);
-  border: 1px solid var(--border-color);
-}
-
-.accordion-item.active {
-  background: var(--bg-muted);
-  font-weight: bold;
-}
-
-.project-name {
-  font-size: 0.7rem;
-  text-decoration: none;
-  color: var(--text-color);
-  transition: text-decoration 0.3s ease;
-}
-
-.accordion-item.active .project-name {
-  text-decoration: underline;
-}
-
-.arrow {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  transition: transform 0.3s ease;
-}
-
-.rotate {
-  transform: rotate(90deg);
-}
-
-.accordion-right {
-  flex: 3;
-  padding: 0px 40px 40px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background: var(--bg-color);
-}
-
-.project-detail {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.project-gif {
-  width: 50%;
-  max-height: fit-content;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: width 0.3s ease, max-height 0.3s ease;
-  box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-.project-title {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: var(--text-color);
-}
-
-.project-description {
-  font-size: 0.8rem;
-  margin-bottom: 16px;
-  line-height: 1.5;
-  color: var(--text-color);
-}
-
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.tech-badge {
-  background: var(--bg-muted);
-  color: var(--text-color);
-  font-size: 0.8rem;
-  padding: 6px 12px;
-  border-radius: 20px;
-}
-
-.project-links {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  background: var(--button-bg);
-  color: var(--button-text);
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 0.85rem;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: var(--button-hover-bg);
-}
-
-.mobile-detail {
-  background: var(--bg-muted);
-  padding: 16px;
-  border-left: 2px solid var(--border-color);
-}
-
-@media (max-width: 768px) {
-  .accordion-right {
-    display: none;
-  }
-
-  .accordion-section {
-    min-height: fit-content;
-    flex-direction: column;
-    padding-left: 0px;
-  }
-
-  .accordion-left {
-    max-width: 100%;
-    border-right: none;
-    border-bottom: 2px solid var(--border-color);
-  }
-
-  .accordion-right {
-    padding: 20px;
-  }
-
-  .accordion-item {
-    justify-content: space-between;
-  }
-
-  .project-gif {
-    width: 100%;
-    max-height: 200px;
-  }
-} */
-
 .accordion-container {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* max-width: 100%; */
   margin: 0 auto;
   padding: 0 20px;
-  /* border: 1px solid var(--border-color); */
 }
 
 .accordion-section {
   background-color: var(--card-bg);
-  /* border: 1px solid blue; */
   display: flex;
   width: 100%;
   max-height: 500px;
@@ -204,30 +25,38 @@
 
 .accordion-left-wrapper {
   position: relative;
-  width: 100%;
+  flex: 1;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .accordion-left {
-  background-color: var(--card-bg);
-  /* border-top: 2px solid var(--accent-color);
-  box-shadow: 0 4px 10px rgba(255, 217, 0, 0.4); */
- /* shadow above */
+  background-color: var(--bg-color);
+  /* border: 1px solid var(--border-color); */
   flex: 1;
-  /* max-width: 250px; */
-  /* background: var(--bg-color); */
-  /* border-right: 2px solid var(--accent-color); */
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
-  /* margin-right: 20px; */
+  /* Height calculation: 6 items × ~70px per item = ~420px for 14inch laptop */
+  max-height: 420px;
+  width: 100%;
+  padding: 0;
+  scroll-behavior: smooth;
+  border-left:4px solid var(--bg-muted);
+  margin-left: 5px;
+  transition: border-left 0.3s ease ,margin-left 0.3s ease;
 }
 
 .accordion-left::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+}
+
+.accordion-item-wrapper {
+  flex-shrink: 0;
 }
 
 .accordion-item {
@@ -237,18 +66,25 @@
   align-items: center;
   padding: 14px 20px;
   cursor: pointer;
-  transition: background 0.2s ease, opacity 0.3s ease;
+  transition: background 0.2s ease, opacity 0.3s ease, transform 0.2s ease;
   border-bottom: 1px solid var(--border-color);
   border-radius: 10px;
-  /* box-shadow: 0 4px 12px var(--shadow-color); */
   background: var(--bg-color);
   border: 1px solid var(--border-color);
   opacity: 1;
+  min-height: 50px;
+}
+
+.accordion-item:hover {
+  transform: translateX(5px);
+  background: var(--bg-muted);
 }
 
 .accordion-item.active {
   background: var(--bg-muted);
   font-weight: bold;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(255, 217, 0, 0.3);
 }
 
 .accordion-item.fading {
@@ -264,6 +100,7 @@
 
 .accordion-item.active .project-name {
   text-decoration: underline;
+  color: var(--accent-color);
 }
 
 .arrow {
@@ -272,8 +109,113 @@
   transition: transform 0.3s ease;
 }
 
+.accordion-item.active .arrow {
+  color: var(--accent-color);
+}
+
 .rotate {
   transform: rotate(90deg);
+}
+
+/* Scroll Indicators */
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  
+  /* background-color: var(--card-bg); */
+}
+
+.scroll-indicator.active {
+  opacity: 1;
+  pointer-events: auto;
+  
+}
+
+.scroll-indicator-top {
+  top: 0;
+  flex-direction: column;
+}
+
+.scroll-indicator-bottom {
+  bottom: 0;
+  
+  flex-direction: column;
+}
+
+.scroll-arrow {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.scroll-arrow:hover {
+  background: var(--button-hover-bg);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 217, 0, 0.4);
+}
+
+.scroll-arrow:active {
+  transform: scale(0.95);
+}
+
+/* Glow Effects */
+.scroll-glow {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scroll-glow-top {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 217, 0, 0.4) 0%,
+    rgba(255, 217, 0, 0.2) 50%,
+    transparent 100%
+  );
+  box-shadow: 
+    0 0 20px rgba(255, 217, 0, 0.3),
+    0 0 40px rgba(255, 217, 0, 0.2),
+    0 0 60px rgba(255, 217, 0, 0.1);
+}
+
+.scroll-glow-bottom {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 217, 0, 0.4) 0%,
+    rgba(255, 217, 0, 0.2) 50%,
+    transparent 100%
+  );
+  box-shadow: 
+    0 0 20px rgba(255, 217, 0, 0.3),
+    0 0 40px rgba(255, 217, 0, 0.2),
+    0 0 60px rgba(255, 217, 0, 0.1);
 }
 
 .accordion-right {
@@ -283,8 +225,6 @@
   width: 100%;
   flex-direction: column;
   justify-content: flex-start;
-  /* background: var(--bg-color); */
-  /* margin-left: 20px; */
 }
 
 .project-detail {
@@ -327,6 +267,13 @@
   font-size: 0.8rem;
   padding: 6px 12px;
   border-radius: 20px;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.tech-badge:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px rgba(255, 217, 0, 0.2);
 }
 
 .project-links {
@@ -342,11 +289,14 @@
   border-radius: 4px;
   text-decoration: none;
   font-size: 0.85rem;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
 
 .btn:hover {
   background: var(--button-hover-bg);
+  border-color: var(--accent-color);
+  box-shadow: 0 2px 8px rgba(255, 217, 0, 0.2);
 }
 
 .mobile-detail {
@@ -384,6 +334,7 @@
   background: var(--button-hover-bg);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .accordion-container {
     padding: 0 10px;
@@ -396,6 +347,7 @@
   .accordion-section {
     min-height: fit-content;
     flex-direction: column;
+    max-height: none;
   }
 
   .accordion-left-wrapper {
@@ -405,7 +357,10 @@
   .accordion-left {
     max-width: 100%;
     border-right: none;
-    border-bottom: 2px solid var(--border-color);
+    /* border-bottom: 2px solid var(--border-color); */
+    max-height: none;
+    border-left: 1px solid var(--bg-muted);
+    margin-left: 0;
   }
 
   .accordion-right {
@@ -421,20 +376,45 @@
     max-height: 200px;
   }
 
-  .scroll-buttons {
+  .scroll-indicator {
     display: none;
   }
 }
 
-@media (min-width: 769px) {
+/* Laptop screens (14-inch and similar) */
+@media (min-width: 769px) and (max-width: 1366px) {
   .accordion-section {
     max-width: 1000px;
     margin: 0 auto;
   }
+  
+  .accordion-left {
+    max-height: 420px; /* Fits exactly 6 items */
+  }
 }
+
+/* Larger screens */
+@media (min-width: 1367px) {
+  .accordion-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .accordion-left {
+    max-height: 480px; /* Can show more items on larger screens */
+  }
+}
+
+/* Small laptops and tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .accordion-left {
+    max-height: 360px; /* Slightly smaller for compact laptops */
+  }
+}
+
 .glow-top {
   position: relative;
-  padding-top: 10px; /* create space if needed */
+  padding-top: 10px;
   border-top: 1px solid rgb(255, 217, 0);
   border-bottom: 1px solid rgb(255, 217, 0);
 }
