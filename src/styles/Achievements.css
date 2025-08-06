@@ -123,11 +123,16 @@
 }
 
 .pub-link {
-  display: inline-block;
-  margin-top: 10px;
+  display: inline-flex; /* flex layout for inline element */
+  align-items: center;  /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  gap: 8px; /* optional: spacing between icon and text */
+  padding: 8px 12px;
+  margin: 10px;
   text-decoration: none;
   color: var(--button-bg);
   font-weight: bold;
+  border-radius: 4px; /* optional: rounded corners */
 }
 
 .pub-link:hover {

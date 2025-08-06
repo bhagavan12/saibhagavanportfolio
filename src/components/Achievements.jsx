@@ -99,6 +99,7 @@ export default function Achievements() {
     publisher: 'IEEE Xplore',
     year: '09 February 2024',
     link: 'https://ieeexplore.ieee.org/document/10394865',
+    workinglink: 'https://team667capstoneproject.vercel.app/'
   };
 
   const leetcode = {
@@ -115,21 +116,12 @@ export default function Achievements() {
   };
   return (
     <section className={`achievements ${theme}`} style={{ position: 'relative'}}>
-      {/* <div className="marquee-container" style={{ zIndex: '-11' }}>
-        <div className="marquee">
-          <span>AWS Certified CP | Developer-Associate | ...</span>
-        </div>
-        <div className="marquee marquee2">
-          <span>EX-183 | Hackerrank FrontEnd | ...</span>
-        </div>
-        <div className="marquee-gradient-left"></div>
-        <div className="marquee-gradient-right"></div>
-      </div> */}
+      
 
       <Marquee fline="AWS Certified CP | Developer-Associate |..." sline = "EX-183 | Hackerrank FrontEnd | LeetCode 50 Days" zi='-1'/>
       <h2 className="section-title">Achievements
             <hr className="headinguline"></hr>
-        </h2>
+      </h2>
       <div className="certificates-grid" style={{ zIndex: '100' }} data-aos="fade-left">
         <h3><span className='ph--certificate-duotone'></span>Certifications</h3>
         <div className="cert-badge">
@@ -193,8 +185,12 @@ export default function Achievements() {
           <p className="pub-meta">
             {publications.publisher} &nbsp;|&nbsp; {publications.year}
           </p>
+          
           <a href={publications.link} target="_blank" rel="noopener noreferrer" className="pub-link">
-            View Publication
+            <span className='ph--link-duotone'></span>View Publication
+          </a>
+          <a href={publications.workinglink} target="_blank" rel="noopener noreferrer" className="pub-link">
+            <span className='ph--link-duotone'></span>ProtoType
           </a>
         </div>
       </div>
