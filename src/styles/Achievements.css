@@ -19,11 +19,6 @@
   color: var(--text-color);
 }
 
-.achievements h3 {
-  font-size: 1.2rem;
-  margin: 30px 0 20px;
-  color: var(--text-color);
-}
 
 .certificates-grid {
   display: flex;
@@ -32,11 +27,18 @@
   justify-content: center;
 }
 
-.certificates-grid h3 {
+.certificates-grid h3{
   width: 100%;
   font-size: clamp(1.2rem, 2.2vw, 1.4rem);
   text-align: center;
   margin-bottom: 20px;
+  color: var(--text-color);
+}
+.achievements .pubhead{
+  width: 100%;
+  font-size: clamp(1.2rem, 2.2vw, 1.4rem);
+  text-align: center;
+  margin-top: 20px;
   color: var(--text-color);
 }
 .cert-badge {
@@ -80,14 +82,65 @@
 }
 
 .pub-card1 {
+  position: relative;
   flex: 1.75;
   background-color: var(--card-bg);
-  /* border: 1px solid var(--border-color); */
   padding: 20px;
   border-radius: 8px;
-  /* box-shadow: 0 4px 12px var(--shadow-color); */
-  transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
+  overflow: hidden;
 }
+
+/* Responsive image in bottom right */
+.prototype-image-wrapper {
+  display: block;
+  position: absolute;
+ 
+  width: 40%;
+  height: auto;
+  cursor: pointer;
+  filter: blur(3px);         /* Blur when not hovered */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.cap1{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+/* Link icon overlay */
+.prototype-link-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* color: var(--button-bg); */
+  
+  padding: 6px;
+  
+  opacity: 0;
+  transition: opacity 0.3s ease,left 0.3s ease,transform 0.3s ease;
+  font-size: 1.25rem;
+}
+.prototype-demo:hover .prototype-link-icon {
+  opacity: 1;               /* Show icon on hover */
+  
+  /* filter: invert(var(--theme-invert)); Invert color based on theme */
+}
+/* Hover effect to show the icon */
+.prototype-image-wrapper:hover{
+  opacity: 1;
+  filter: blur(0);           /* Remove blur on hover */
+  /* transform: scale(1.05);  */
+}
+
+.prototype-image-wrapper:hover img {
+  transform: scale(1.01);
+}
+
 
 .pub-card2 {
   flex: 0.25;
@@ -158,6 +211,7 @@
 
 
 @media (max-width: 768px) {
+  
   .certificates-grid {
     flex-direction: column;
     align-items: center;
@@ -167,7 +221,9 @@
     flex-direction: column;
     align-items: center;
   }
-
+  .prototype-image-wrapper {
+    
+  }
   .pub-card1,
   .pub-card2 {
     max-width: 100%;

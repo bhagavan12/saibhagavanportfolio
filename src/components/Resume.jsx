@@ -18,7 +18,9 @@ export default function ResumeSection() {
 
   return (
     <section className={`resume-section ${theme}`}>
-      <h2 className="resume-title">My Resume</h2>
+      <h2 className="section-title">Resume
+            <hr className="headinguline"></hr>
+      </h2>
       <div className="pdf-preview">
         <Worker workerUrl={`https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js`}>
           <Viewer fileUrl={pdf} className="pdf-viewer" />

@@ -90,17 +90,30 @@ import React, { useContext } from 'react';
 import { ThemeContext } from './ThemeProvider';
 import Marquee from './sub/Marquee';
 import '../styles/Achievements.css';
-
+import PublicationsPure from './Publications';
 export default function Achievements() {
   const { theme } = useContext(ThemeContext);
 
-  const publications = {
-    title: 'Secure Encryption Framework for Multi-Cloud Environments: Leveraging Symmetric and Asymmetric Encryption',
-    publisher: 'IEEE Xplore',
-    year: '09 February 2024',
-    link: 'https://ieeexplore.ieee.org/document/10394865',
-    workinglink: 'https://team667capstoneproject.vercel.app/'
-  };
+  const publications = [
+    {
+      title: 'Secure Encryption Framework for Multi-Cloud Environments: Leveraging Symmetric and Asymmetric Encryption',
+      publisher: 'IEEE Xplore',
+      year: '09 February 2024',
+      link: 'https://ieeexplore.ieee.org/document/10394865',
+      workinglink: 'https://team667capstoneproject.vercel.app/'
+    },
+    {
+      title: 'A Secure Data Handling Framework Using AES, Merkle Trees, and Decentralized Storage',
+      overview: 'This research-oriented project presents a multi-layered data protection system that ensures secure transmission, tamper detection, and decentralized storage using a combination of cryptographic and data processing techniques. The work was conducted as a part of my research on secure storage frameworks, emphasizing the integration of encryption, hashing, and distributed file systems.',
+      technologiesused: ['AES', 'Merkle Trees', 'Pako.js', 'Bitwise Rotation', 'Filebase (IPFS-backed)', 'MongoDB'],
+      keys: ['Designed a hybrid architecture combining on-chain and off-chain storage.',
+        'Implemented AES encryption for secure data handling.',
+        'Utilized Merkle Trees for data integrity verification.',
+        'Employed Pako.js for efficient data compression.',
+        'Integrated Filebase for decentralized storage solutions.'],
+      workinglink: 'https://team667capstoneproject.vercel.app/'
+    }
+  ];
 
   const leetcode = {
     id: '6',
@@ -115,12 +128,12 @@ export default function Achievements() {
     newTab.focus();
   };
   return (
-    <section className={`achievements ${theme}`} style={{ position: 'relative'}}>
-      
+    <section className={`achievements ${theme}`} style={{ position: 'relative' }}>
 
-      <Marquee fline="AWS Certified CP | Developer-Associate |..." sline = "EX-183 | Hackerrank FrontEnd | LeetCode 50 Days" zi='-1'/>
+
+      <Marquee fline="AWS Certified CP | Developer-Associate |..." sline="EX-183 | Hackerrank FrontEnd | LeetCode 50 Days" zi='-1' />
       <h2 className="section-title">Achievements
-            <hr className="headinguline"></hr>
+        <hr className="headinguline"></hr>
       </h2>
       <div className="certificates-grid" style={{ zIndex: '100' }} data-aos="fade-left">
         <h3><span className='ph--certificate-duotone'></span>Certifications</h3>
@@ -179,21 +192,36 @@ export default function Achievements() {
           </div>
         </div>
       </div>
-      <div className="publications-list">
-        <div className="pub-card1">
-          <h4>{publications.title}</h4>
-          <p className="pub-meta">
-            {publications.publisher} &nbsp;|&nbsp; {publications.year}
-          </p>
-          
-          <a href={publications.link} target="_blank" rel="noopener noreferrer" className="pub-link">
-            <span className='ph--link-duotone'></span>View Publication
-          </a>
-          <a href={publications.workinglink} target="_blank" rel="noopener noreferrer" className="pub-link">
-            <span className='ph--link-duotone'></span>ProtoType
-          </a>
-        </div>
-      </div>
+      <h3 className='pubhead'><span className='icon-park-twotone--notebook-one'></span>Research Work</h3>
+      <PublicationsPure />
     </section>
   );
 }
+{/* <div className="publications-list">
+        <div className="pub-card1">
+          <h4>{publications[0].title}</h4>
+          <p className="pub-meta">
+            {publications[0].publisher} &nbsp;|&nbsp; {publications[0].year}
+          </p>
+
+          <a href={publications[0].link} target="_blank" rel="noopener noreferrer" className="pub-link">
+            <span className="ph--link-duotone"></span>View Publication
+          </a>
+
+          <a
+            href={publications[0].workinglink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="prototype-image-wrapper"
+          >
+            <img src="./img/cap1.png" alt="Prototype Preview" />
+            <div className='prototype-link-icon'>
+              <span className="ph--link-duotone " style={{border:"1px solid #FFD700",borderRadius:"50%"}}></span>
+            </div>
+          </a>
+        </div>
+
+        <div className="pub-card1">
+          <h4>{publications[1].title}</h4>
+        </div>
+      </div> */}
