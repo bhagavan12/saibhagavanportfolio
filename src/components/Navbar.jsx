@@ -1,7 +1,9 @@
 import '../styles/DockDemo.css';
-import React from 'react';
+import React ,{useEffect,useState}from 'react';
+import ThemeToggle from './ThemeToggle';
 
-export default function DockNavbar() {
+export default function DockNavbar({currsize}) {
+ 
   const navItems = [
     { label: 'Home', icon: 'material-symbols--home-outline-rounded', link: '#hero' },
     { label: 'About Me', icon: 'cib--about-me', link: '#aboutme' },
@@ -18,6 +20,7 @@ export default function DockNavbar() {
           <span className="dock-label">{item.label}</span>
         </a>
       ))}
+      {(currsize!=="laptop")&&<ThemeToggle/>}
       
     </nav>
   );

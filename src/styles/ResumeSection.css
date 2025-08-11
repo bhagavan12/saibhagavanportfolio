@@ -30,6 +30,7 @@
 }
 
 .resume-buttons {
+  
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -68,6 +69,8 @@
   .resume-buttons {
     flex-direction: column;
     align-items: center;
+    width: fit-content;
+    justify-content: center;
   }
 
   .btn {

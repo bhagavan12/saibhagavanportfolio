@@ -83,7 +83,7 @@ export default function HeroSection() {
 
     const handleChange = (e) => {
       if (e.matches) {
-        setCurrentImg("./img/image.png");
+        setCurrentImg("./img/image.webp");
       } else {
         setCurrentImg('./img/image.webp');
       }

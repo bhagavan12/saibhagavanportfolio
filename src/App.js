@@ -24,12 +24,28 @@ export default function App() {
     });
   }, []);
   const [loading, setLoading] = useState(true);
-
+  const [currsize, setCurrSize] = useState("laptop");
+  useEffect(() => {
+      const mediaQuery = window.matchMedia('(max-width: 768px)');
+  
+      const handleChange = (e) => {
+        if (e.matches) {
+          setCurrSize("mobile");
+        } else {
+          setCurrSize("laptop");
+        }
+      };
+  
+      handleChange(mediaQuery);
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    }, []);
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000); // Typing animation time
     return () => clearTimeout(timer);
+
   }, []);
 
   if (loading) {
@@ -52,7 +68,7 @@ export default function App() {
     <div className='app' style={{ overflowX: 'hidden' }}>
       {/* <div className="marquee-gradient-left"></div>
       <div className="marquee-gradient-right"></div> */}
-      <Navbar />
+      <Navbar currsize={currsize}/>
       <section id="hero"><Hero /></section>
       <hr className="page-break" />
       <section id="aboutme"><AboutMe1 /></section>
@@ -63,7 +79,7 @@ export default function App() {
       <section id="resume"><Resume /></section>
       <section id="social"><SocialLinks /></section>
       <section id="social"><Contact></Contact></section>
-      <ThemeToggle />
+      {(currsize=="laptop")&&<ThemeToggle currsize={currsize}/>}
 
     </div>
     //  </ThemeProvider>
