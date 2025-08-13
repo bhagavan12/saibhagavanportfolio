@@ -10,20 +10,25 @@ const PublicationsPure = () => {
             publisher: 'IEEE Xplore',
             year: '09 February 2024',
             link: 'https://ieeexplore.ieee.org/document/10394865',
-            workinglink: 'https://team667capstoneproject.vercel.app/'
+            workinglink: 'https://team667capstoneproject.vercel.app/',
+            img: './img/cap1.png',
+            isPublished:"Published"
         },
         {
-            title: 'A Secure Data Handling Framework Using AES, Merkle Trees, and Decentralized Storage',
+            title: 'Secure Data Handling via the ICED Methodology with AES, Merkle Trees, and Decentralized Storage',
             overview: 'This research-oriented project presents a multi-layered data protection system that ensures secure transmission, tamper detection, and decentralized storage using a combination of cryptographic and data processing techniques. The work was conducted as a part of my research on secure storage frameworks, emphasizing the integration of encryption, hashing, and distributed file systems.',
             technologiesused: ['AES', 'Merkle Trees', 'Pako.js', 'Bitwise Rotation', 'Filebase (IPFS-backed)', 'MongoDB'],
             keys: [
                 'Designed a hybrid architecture combining on-chain and off-chain storage.',
-                'Implemented AES encryption for secure data handling.',
+                'Implemented Secure Data Handling via the ICED Methodology.',
                 'Utilized Merkle Trees for data integrity verification.',
                 'Employed Pako.js for efficient data compression.',
                 'Integrated Filebase for decentralized storage solutions.'
+
             ],
-            workinglink: 'https://team667capstoneproject.vercel.app/'
+            workinglink: 'https://team667capstone2.vercel.app/',
+            img: './img/cap2.png',
+            isPublished:"Research"
         }
     ];
 
@@ -40,6 +45,7 @@ const PublicationsPure = () => {
 
 
             <div className="publications-container">
+            
                 {publications.map((pub, index) => (
                     <div
                         key={index}
@@ -51,7 +57,7 @@ const PublicationsPure = () => {
                     >
                         {/* Background Gradient Overlay */}
                         {/* <div className="card-overlay" /> */}
-
+                            <div className='pub-badge'>{pub.isPublished}</div>
                         <div className="card-content">
                             {/* Title Section */}
                             <div className="title-section">
@@ -65,6 +71,9 @@ const PublicationsPure = () => {
                                         {pub.publisher} | {pub.year}
                                     </p>
                                 )}
+                                {pub.isPublished==="Research" && (
+                                    <p className='card-meta'>Enhanced Research Extension</p>
+                                )}
                             </div>
 
                             {/* Collapsed State Content */}
@@ -72,10 +81,10 @@ const PublicationsPure = () => {
                                 <div className="collapsed-content">
                                     {pub.link && (
                                         <button
-                                            className="btn btn-publication-link"
+                                            className="btn1 btn-publication-link"
                                             onClick={() => openLinkInNewTab(pub.link)}
                                         >
-                                            <span className="ph--link-duotone"></span>
+                                            <span className="portallink"></span>
                                             View Publication
                                         </button>
                                     )}
@@ -83,7 +92,7 @@ const PublicationsPure = () => {
                                     {/* View More Button */}
                                     {index === 1 && (
                                         <button
-                                            className="btn btn-publication-link"
+                                            className="btn1 btn-publication-link"
                                             onClick={() => handleViewMore(index)}
                                         >
                                             View More
@@ -96,8 +105,9 @@ const PublicationsPure = () => {
                                         <div
                                             className="prototype-demo"
                                             onClick={() => openLinkInNewTab(pub.workinglink)}
+                                            style={{ visibility: index === 1 ? "visible" : "hidden" }}
                                         >
-                                            <img src="./img/cap1.png" alt="Prototype Preview" className='cap1' />
+                                            <img src={pub.img} alt="Prototype Preview" className='cap1' />
                                             <div className='prototype-link-icon'>
                                                 <span className="ph--link-duotone " style={{ border: "1px solid #FFD700", borderRadius: "50%" }}></span>
                                             </div>
@@ -163,16 +173,16 @@ const PublicationsPure = () => {
                                     <div className="action-buttons">
                                         {pub.workinglink && (
                                             <button
-                                                className="btn btn-publication"
+                                                className="btn1"
                                                 onClick={() => openLinkInNewTab(pub.workinglink)}
                                             >
-                                                <span className="ph--link-duotone"></span>
+                                                <span className="portallink"></span>
                                                 View Prototype
                                             </button>
                                         )}
 
                                         <button
-                                            className="btn btn-view-more"
+                                            className="btn1 btn-view-more"
                                             onClick={() => handleViewMore(index)}
                                         >
                                         <span className='mdi--arrow-collapse'></span>

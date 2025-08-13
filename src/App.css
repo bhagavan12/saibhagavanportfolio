@@ -73,10 +73,10 @@ body.dark {
   --theme-invert: 0;
   --text-muted: #888888;
   --bg-muted: rgba(205, 202, 202, 0.24);
-  --card-bg: #f3f4f6; /* Light card background, slightly lighter than --bg-muted */
-  --accent-color: #e7c247; /* Gold accent for headings and badges */
-  --badge-bg: #e5e7eb; /* Slightly lighter than --bg-muted for badges */
-  --badge-text: #374151; /* Darker text for badge readability */
+  --card-bg: #f3f4f6; 
+  --accent-color: #e7c247; 
+  --badge-bg: #e5e7eb; 
+  --badge-text: #374151; 
   --accent-bg: #f1bf418e; 
 }
 
@@ -94,10 +94,10 @@ body.dark {
   --theme-invert: 1;
   --text-muted: #aaaaaa;
   --bg-muted: rgba(100, 100, 100, 0.24);
-  --card-bg: #2d2d2d; /* Darker card background, aligned with --bg-muted */
-  --accent-color: #FFD700; /* Lighter gold for dark mode */
-  --badge-bg: #4b5563; /* Darker badge background */
-  --badge-text: #e5e7eb; /* Lighter text for badges in dark mode */
+  --card-bg: #2d2d2d; 
+  --accent-color: #FFD700; 
+  --badge-bg: #4b5563; 
+  --badge-text: #e5e7eb; 
   --accent-bg: #ffb70048;
 }
 .app {
