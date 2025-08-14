@@ -59,6 +59,15 @@
     },
     {
       "id": "2",
+      "src": "./img/agriinsight.gif",
+      "title": "AgriInsight",
+      "description": "Soil Report & Farming Data Management System with role-based access for volunteers, experts, and admins, real-time data visualization, crop recommendations, and automatic location-based translation.",
+      
+      "linkg": "https://github.com/bhagavan12/AgriInsight",
+      "used":["ReactJS","Redux","ExpressJS","MongoDB","Twilio","NodeMailer"]
+    },
+    {
+      "id": "3",
       "src": "./img/dealsblendr.gif",
       "title": "DealsBlendr",
       "description": "This DealsBlendr application is built using ReactJs and Spring framework. It is useful for users who are searching for better prices of electronic devices.",
@@ -67,7 +76,7 @@
       "used":["Java","SpringBoot","Hibernate","ReactJS","MongoDB","netlify","render"]
     },
     {
-      "id": "3",
+      "id": "4",
       "src": "./img/linkspace.gif",
       "title": "LinkSpace",
       "description": "This project is a social media application where users can connect with friends ,share posts and Used technoloigies are ReactJS , Firebase Authentication and Database",
@@ -76,7 +85,7 @@
       "used":["ReactJS","Firebase","CSS","BootStrap","Vercel"]
     },
     {
-      "id": "4",
+      "id": "5",
       "src": "./img/ezgif.com-crop.gif",
       "title": "Stockhive",
       "description": " Your go-to destination for real-time stock market updates and insights. Stay ahead of the curve with personalized watchlists and dynamic charts.",
@@ -85,7 +94,16 @@
       "used":["ReactJS","ExpressJS","BootStrap","MongoDB","netlify","NodeJS"]
     },
     {
-      "id": "5",
+      "id": "6",
+      "src": "./img/smartcity.gif",
+      "title": "SmartCity App",
+      "description": "Smart City app in ReactJS for finding nearby places with location-based search, category filters, and directions using Geoapify & Google Maps APIs. Built with ReactJS, CSS3, Google API, and Geoapify.",
+      "linkd": "https://smartcity-nine.vercel.app/",
+      "linkg": "https://github.com/bhagavan12/smartcity",
+      "used":["ReactJS","Geoapify","Google Maps API"]
+    },
+    {
+      "id": "7",
       "src": "./img/ezgif.com-speed.gif",
       "title": "DishDiscovery",
       "description": "an interactive web app featuring step-by-step recipes and meal tutorials tailored for culinary enthusiasts",
@@ -94,16 +112,7 @@
       "used":["ReactJS","APIs","JavaScript","CSS"]
     },
     {
-      "id": "6",
-      "src": "./img/votingapp_gif.gif",
-      "title": "Cloud Voting App",
-      "description": "Developed a cloud-native voting app with AWS services and React.js, leveraging DynamoDB, Lambda, API Gateway, and S3, Firebase for easy authentication. ",
-      "linkd": "",
-      "linkg": "https://github.com/bhagavan12/cloudvotingapp",
-      "used":["ReactJS","AWS","Firebase"]
-    },
-    {
-      "id": "7",
+      "id": "8",
       "src": "./img/votingapp_gif.gif",
       "title": "Cloud Voting App",
       "description": "Developed a cloud-native voting app with AWS services and React.js, leveraging DynamoDB, Lambda, API Gateway, and S3, Firebase for easy authentication. ",

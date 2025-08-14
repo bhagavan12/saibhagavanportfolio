@@ -27,14 +27,14 @@ const AboutMe1 = () => {
   ];
 
   const coursework = [
+    'Software Engineering',
+    'Web Technologies',
+    'Object-Oriented Programming',
     'Data Structures & Algorithms',
+    'Database Management Systems',
+    'Cloud Computing',
     'Operating Systems',
     'Computer Networks',
-    'Object-Oriented Programming',
-    'Database Management Systems',
-    'Web Technologies',
-    'Software Engineering',
-    'Cloud Computing',
   ];
 
   return (
