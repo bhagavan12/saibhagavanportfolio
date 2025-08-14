@@ -173,7 +173,7 @@ const PublicationsPure = () => {
                                     <div className="action-buttons">
                                         {pub.workinglink && (
                                             <button
-                                                className="btn1"
+                                                className="btn1 btn-view-more"
                                                 onClick={() => openLinkInNewTab(pub.workinglink)}
                                             >
                                                 <span className="portallink"></span>

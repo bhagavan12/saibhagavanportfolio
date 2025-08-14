@@ -221,12 +221,12 @@ export default function ProjectsAccordion() {
                     </div>
                     <div className="project-links">
                       {project.linkd && (
-                        <a href={project.linkd} target="_blank" rel="noopener noreferrer" className="btn">
+                        <a href={project.linkd} target="_blank" rel="noopener noreferrer" className="btn1" style={{textDecoration:"none",width:"100%"}}>
                           Live Demo
                         </a>
                       )}
                       {project.linkg && (
-                        <a href={project.linkg} target="_blank" rel="noopener noreferrer" className="btn">
+                        <a href={project.linkg} target="_blank" rel="noopener noreferrer" className="btn1" style={{textDecoration:"none",width:"100%"}}>
                           GitHub
                         </a>
                       )}
@@ -260,12 +260,12 @@ export default function ProjectsAccordion() {
                 </div>
                 <div className="project-links">
                   {selectedProject.linkd && (
-                    <a href={selectedProject.linkd} target="_blank" rel="noopener noreferrer" className="btn">
+                    <a href={selectedProject.linkd} target="_blank" rel="noopener noreferrer" className="btn1" style={{textDecoration:"none"}}>
                       Live Demo
                     </a>
                   )}
                   {selectedProject.linkg && (
-                    <a href={selectedProject.linkg} target="_blank" rel="noopener noreferrer" className="btn">
+                    <a href={selectedProject.linkg} target="_blank" rel="noopener noreferrer" className="btn1" style={{textDecoration:"none"}}>
                       GitHub
                     </a>
                   )}

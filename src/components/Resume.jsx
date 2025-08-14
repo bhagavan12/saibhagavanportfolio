@@ -27,8 +27,8 @@ export default function ResumeSection() {
         </Worker>
       </div>
       <div className="resume-buttons">
-        <a href={pdf} download className="btn">📎 Download Resume</a>
-        <a href={pdf} target="_blank" rel="noopener noreferrer" className="btn secondary">🔗 View Fullscreen</a>
+        <a href={pdf} download className="btn1" style={{textDecoration:"none"}}><span className='ph--link-duotone'></span>  Download Resume</a>
+        <a href={pdf} target="_blank" rel="noopener noreferrer" className="btn1" style={{textDecoration:"none"}}><span className='portallink'></span>View Fullscreen</a>
       </div>
     </section>
   );
