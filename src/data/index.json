@@ -68,6 +68,15 @@
     },
     {
       "id": "3",
+      "src": "./img/vidscriptgif.gif",
+      "title": "VidScript",
+      "description": "Built a full-stack application that automatically generates subtitles from video/audio files. Supports multilingual transcription and translation to English using OpenAI Whisper. Export options include SRT/VTT subtitle formats and burned-in subtitles on videos.",
+      
+      "linkg": "https://github.com/bhagavan12/FastApi",
+      "used":["ReactJS","FastAPI","OpenAI-Whisper"]
+    },
+    {
+      "id": "4",
       "src": "./img/dealsblendr.gif",
       "title": "DealsBlendr",
       "description": "This DealsBlendr application is built using ReactJs and Spring framework. It is useful for users who are searching for better prices of electronic devices.",
@@ -76,7 +85,7 @@
       "used":["Java","SpringBoot","Hibernate","ReactJS","MongoDB","netlify","render"]
     },
     {
-      "id": "4",
+      "id": "5",
       "src": "./img/linkspace.gif",
       "title": "LinkSpace",
       "description": "This project is a social media application where users can connect with friends ,share posts and Used technoloigies are ReactJS , Firebase Authentication and Database",
@@ -85,7 +94,7 @@
       "used":["ReactJS","Firebase","CSS","BootStrap","Vercel"]
     },
     {
-      "id": "5",
+      "id": "6",
       "src": "./img/ezgif.com-crop.gif",
       "title": "Stockhive",
       "description": " Your go-to destination for real-time stock market updates and insights. Stay ahead of the curve with personalized watchlists and dynamic charts.",
@@ -94,7 +103,7 @@
       "used":["ReactJS","ExpressJS","BootStrap","MongoDB","netlify","NodeJS"]
     },
     {
-      "id": "6",
+      "id": "7",
       "src": "./img/smartcity.gif",
       "title": "SmartCity App",
       "description": "Smart City app in ReactJS for finding nearby places with location-based search, category filters, and directions using Geoapify & Google Maps APIs. Built with ReactJS, CSS3, Google API, and Geoapify.",
@@ -103,7 +112,7 @@
       "used":["ReactJS","Geoapify","Google Maps API"]
     },
     {
-      "id": "7",
+      "id": "8",
       "src": "./img/ezgif.com-speed.gif",
       "title": "DishDiscovery",
       "description": "an interactive web app featuring step-by-step recipes and meal tutorials tailored for culinary enthusiasts",
@@ -112,7 +121,7 @@
       "used":["ReactJS","APIs","JavaScript","CSS"]
     },
     {
-      "id": "8",
+      "id": "9",
       "src": "./img/votingapp_gif.gif",
       "title": "Cloud Voting App",
       "description": "Developed a cloud-native voting app with AWS services and React.js, leveraging DynamoDB, Lambda, API Gateway, and S3, Firebase for easy authentication. ",
